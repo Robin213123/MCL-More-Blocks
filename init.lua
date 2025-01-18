@@ -55,7 +55,7 @@ mcl_stairs.register_stair_and_slab_simple("fancycobblebricks", "mcl_moreblocks:f
 -----------------------separate--------------
 mcl_fences.register_fence_def("albino_fence", {
     description = S("Albino Planks Fence"),
-    tiles = { "albino_fence.png" },
+    tiles = { "albino_planks.png" },
     groups = { pickaxey = 1, fence_nether_brick = 1 },
     connects_to = { "group:albino_planks", "group:solid" },
     sounds = mcl_sounds.node_sound_stone_defaults(),
