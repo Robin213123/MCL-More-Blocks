@@ -139,3 +139,35 @@ minetest.register_node("mcl_moreblocks:plant1", {
 	--}
 --})
 
+---------------------------------------------------------Hyacinth
+minetest.register_node("mcl_moreblocks:hyacinth", {
+	description = S("Hyacinth"),
+	tiles = {"hyacinth.png"},
+	use_texture_alpha = "clip",
+	drawtype = "mesh",
+	mesh = "hyacinth.obj",
+	--paramtype = "light",
+	stack_max = 16,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3125, -0.5, -0.3125, 0.3125, 0.5, 0.3125},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {-0.3125, -0.5, -0.3125, 0.3125, 0.5, 0.3125},
+	},
+	is_ground_content = false,
+	--light_source = minetest.LIGHT_MAX,
+	groups = {handy=1, axey=1, attached_node=1, deco_block=1, flammable=-1},
+	sounds = mcl_sounds.node_sound_wood_defaults(),
+	_mcl_blast_resistance = 0.9,
+	_mcl_hardness = 0.9,
+})
+--minetest.register_craft({
+	--output = "mcl_moreblocks:plant1",
+	--recipe = {
+		--{"group:wool", "group:wool", "group:wool"},
+		--{"group:wool", "mcl_torches:torch", "group:wool"},
+		--{"mcl_core:cobble", "mcl_core:cobble", "mcl_core:cobble"}
+	--}
+--})
