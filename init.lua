@@ -171,3 +171,35 @@ minetest.register_node("mcl_moreblocks:hyacinth", {
 		--{"mcl_core:cobble", "mcl_core:cobble", "mcl_core:cobble"}
 	--}
 --})
+----------------------------------------------------
+--minetest.register_node("mcl_moreblocks:burned_lantern", {
+--	description = S("Burnt Lantern"),
+--	texture = "burned_lantern.png",
+--	texture_inv = "mcl_lanterns_lantern_inv.png",
+--	light_level = minetest.LIGHT_MAX,
+--})
+---------------------------------------------------------------lantern burnt--
+minetest.register_node("mcl_moreblocks:burned_lantern", {
+	description = S("Burnt Lantern"),
+	tiles = {"burned_lantern.png"},
+	use_texture_alpha = "clip",
+	drawtype = "mesh",
+	mesh = "mcl_moreblocks_lantern_chain.obj",
+	--paramtype = "light",
+	stack_max = 64,
+	selection_box = {
+		type = "fixed",
+		fixed = {-0.3125, -0.5, -0.3125, 0.3125, 0.5, 0.3125},
+	},
+	collision_box = {
+		type = "fixed",
+		fixed = {-0.3125, -0.5, -0.3125, 0.3125, 0.5, 0.3125},
+	},
+	is_ground_content = false,
+	--light_source = minetest.LIGHT_MAX,
+	groups = {handy=1, pickaxey=1, attached_node=1, deco_block=1, flammable=-1},
+	sounds = mcl_sounds.node_sound_wood_defaults(),
+	_mcl_blast_resistance = 0.9,
+	_mcl_hardness = 0.9,
+})
+----------------------------------THERE IS NO LINE 205-
