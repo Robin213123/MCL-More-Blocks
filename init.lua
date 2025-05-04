@@ -226,3 +226,26 @@ minetest.register_craft({
     "mcl_fishing:fish_raw"
   }
 })
+
+--sandwich
+minetest.register_craftitem("mcl_moreblocks:carrot_sandwich", {
+	description = S("Carrot Sandwich"),
+	_doc_items_longdesc = S("Probably should have been cooked, but whatevs!"),
+	inventory_image = "carrot_sandwich.png",
+	wield_image = "carrot_sandwich.png",
+	on_place = minetest.item_eat(2),
+	on_secondary_use = minetest.item_eat(2),
+	groups = { food = 2, eatable = 2, smoker_cookable = 0, campfire_cookable = 0 },
+	_mcl_saturation = 1.2,
+	stack_max = 16,
+})
+
+minetest.register_craft({
+  type = "shapeless",
+  output = "mcl_moreblocks:carrot_sandwich",
+  recipe = {
+    "mcl_farming:bread",
+    "mcl_farming:carrot_item",
+    "mcl_mobitems:cooked_beef"
+  }
+})
