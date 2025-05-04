@@ -203,3 +203,26 @@ minetest.register_node("mcl_moreblocks:burned_lantern", {
 	_mcl_hardness = 0.9,
 })
 ----------------------------------THERE IS NO LINE 205-
+--idk im tryna add foodstuffs and sandwiches ig
+--sushi
+minetest.register_craftitem("mcl_moreblocks:sushi", {
+	description = S("Sushi"),
+	_doc_items_longdesc = S("Sushi is a food that can be eaten."),
+	inventory_image = "sushi.png",
+	wield_image = "sushi.png",
+	on_place = minetest.item_eat(2),
+	on_secondary_use = minetest.item_eat(2),
+	groups = { food = 2, eatable = 2, smoker_cookable = 0, campfire_cookable = 0 },
+	_mcl_saturation = 1.2,
+	stack_max = 16,
+})
+
+minetest.register_craft({
+  type = "shapeless",
+  output = "mcl_moreblocks:sushi",
+  recipe = {
+    "mcl_ocean:dried_kelp",
+    "mcl_ocean:kelp",
+    "mcl_fishing:fish_raw"
+  }
+})
